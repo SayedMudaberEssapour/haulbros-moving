@@ -1,0 +1,33 @@
+.how-section {
+  background: #fff;
+  padding: 3em 2vw;
+  text-align: center;
+}
+.how-steps {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+.how-step {
+  background: #f8fbff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,114,255,0.07);
+  padding: 2em 1.5em;
+  width: 220px;
+}
+.how-icon {
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1em auto;
+}
+.how-step h3 { margin: 0.5em 0; }
+
