@@ -1,33 +1,76 @@
 .how-section {
-  background: #fff;
+  background: rgba(255,255,255,.25);
   padding: 3em 2vw;
   text-align: center;
 }
+
+.how-title {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+}
+
+.how-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  margin: 0.5em auto 0;
+  border-radius: 2px;
+}
+
 .how-steps {
   display: flex;
   justify-content: center;
   gap: 2em;
   margin-top: 2em;
+  flex-wrap: wrap;
 }
+
 .how-step {
-  background: #f8fbff;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0,114,255,0.07);
+  background: rgba(248, 251, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 114, 255, 0.15);
   padding: 2em 1.5em;
   width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
+
+.how-step:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 114, 255, 0.3);
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(90deg, #00c6ff, #0072ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
 .how-icon {
-  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: #fff;
   font-size: 1.6em;
   font-weight: bold;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1em auto;
+  box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+  animation: pulse 2s infinite;
 }
-.how-step h3 { margin: 0.5em 0; }
 
+.how-step h3 {
+  margin: 0.5em 0;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(0, 114, 255, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(0, 114, 255, 0.8); }
+  100% { box-shadow: 0 0 10px rgba(0, 114, 255, 0.4); }
+}

@@ -109,5 +109,4 @@ function QuoteForm() {
     </section>
   );
 }
-
 export default QuoteForm;
